@@ -17,5 +17,97 @@
 
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	</head>
-	<body></body>
+	<body>
+		<div class="container">
+			<div class="firstgradient">
+				<h1>Weather App</h1>
+
+				<form id="search-form">
+					<input
+						type="text"
+						placeholder="Type a city name"
+						autocomplete="off"
+						autofocus="on"
+						id="search-text-input"
+					/>
+					<input type="submit" class="btn btn-primary blue" value="Search" />
+
+					<button class="green">Current Location</button>
+				</form>
+
+				<h2>Location</h2>
+				<div class="row">
+					<div class="col-4 time-and-date">Time and Date</div>
+					<div class="col-4">
+						<div class="theweather">Weather</div>
+						<div>
+							<div class="tempdigits">12</div>
+							<a class="ren-to-cel" href="#"> °C</a>
+							|
+							<a class="cel-to-ren" href="#"> °F</a>
+						</div>
+					</div>
+					<div class="col-4">
+						<li class="precipiate">Precipitation:</li>
+						<li class="theHumidity">Humidity:</li>
+						<li class="windSpeed">Wind:</li>
+					</div>
+				</div>
+
+				<br />
+
+				<div class="row">
+					<div class="col">
+						Sunday
+						<div class="col emoji">☀</div>
+					</div>
+					<div class="col">
+						Monday
+						<div class="col emoji">☀</div>
+					</div>
+					<div class="col">
+						Tuesday
+						<div class="col emoji">🌧</div>
+					</div>
+					<div class="col">
+						Wednesday
+						<div class="col emoji">🌦</div>
+					</div>
+					<div class="col">
+						Thursday
+						<div class="col emoji">🌥</div>
+					</div>
+					<div class="col">
+						Friday
+						<div class="col emoji">❄</div>
+					</div>
+					<div class="col">
+						Saturday
+						<div class="col emoji">☀</div>
+					</div>
+				</div>
+
+				<br />
+
+				<span class="credit">
+					<a
+						class="code-source"
+						href="https://github.com/SMei201900/JS-Project.git"
+						target="_blank"
+					>
+						Open source code</a
+					>
+					by:
+					<a
+						class="profile"
+						href="https://www.linkedin.com/in/sally-mei-1a4439210/"
+						target="_blank"
+					>
+						Sally Mei
+					</a>
+					<a href="#" target="_blank"></a>
+				</span>
+			</div>
+		</div>
+	</body>
 </html>
