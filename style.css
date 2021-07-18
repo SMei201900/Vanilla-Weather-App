@@ -1,0 +1,76 @@
+.firstgradient {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	margin: 50px;
+	background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+	padding: 50px;
+	border-radius: 20px;
+}
+
+h1 {
+	text-align: center;
+	color: white;
+}
+
+h2 {
+	color: #fcae1e;
+}
+
+.col-4 {
+	color: #f984ef;
+	font-size: 20px;
+}
+
+.col {
+	color: #00e0ea;
+	font-size: 18px;
+}
+
+.emoji {
+	color: yellow;
+	font-size: 45px;
+}
+.blue {
+	font-weight: bold;
+	margin-left: 10px;
+	padding: 8px;
+	border-radius: 10px;
+}
+
+.green {
+	margin: 20px auto;
+	font-weight: bold;
+	background: green;
+	color: white;
+	border: none;
+	padding: 10px;
+	border-radius: 10px;
+	transition: all 200ms ease-in-out;
+}
+
+.green:hover {
+	color: white;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.credit {
+	font-size: 15px;
+}
+
+.profile {
+	text-decoration: none;
+}
+
+.profile:hover {
+	text-decoration: underline;
+	transition: all 200ms ease-in-out;
+}
+
+.code-source {
+	text-decoration: none;
+}
+
+.code-source:hover {
+	text-decoration: underline;
+	transition: all 200ms ease-in-out;
+}
