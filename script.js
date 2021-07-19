@@ -35,8 +35,6 @@ function weather(response) {
 	);
 	//the above provides the actual temperature number WITHOUT taking away the C and F
 
-	//MISSING Precipitation
-
 	let howhumid = response.data.main.humidity;
 	document.querySelector(".theHumidity").innerHTML = `Humidity: ${howhumid}`;
 	//the above provides the humidity value
