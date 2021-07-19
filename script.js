@@ -22,6 +22,14 @@ function weather(response) {
 		response.data.weather[0].main;
 	//returns the weather in text. EX: Sunny, Rainy, Cloudy
 
+	let iconE = document.querySelector("#icon");
+	iconE.setAttribute(
+		"src",
+		`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+	);
+	icon.setAttribute("alt", response.data.weather[0].description);
+	//changes the weather icon
+
 	document.querySelector(".tempdigits").innerHTML = Math.round(
 		response.data.main.temp
 	);
