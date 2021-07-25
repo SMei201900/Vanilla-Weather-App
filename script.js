@@ -14,6 +14,55 @@ dateandtime.innerHTML = `${
 } ${now.getHours()}:${now.getMinutes()}`;
 //returns the current day of the week and time
 
+function formatDay(timestamp) {
+	let date = new Date(timestamp * 1000);
+	let day = date.getDay();
+	let dow = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+
+	return dow[day];
+}
+
+function displayForecast(response) {
+	let forecast = response.data.daily;
+	let forecastElement = document.querySelector("#forecast");
+
+	let forecastHTML = `<div class="row">`;
+	forecast.forEach(function (forecastDay, index) {
+		if (index < 6) {
+			forecastHTML =
+				forecastHTML +
+				`
+				<div class="col-2">
+					<div class="forecastdayoftheweek">${formatDay(forecastDay.dt)}</div>
+					<img
+						src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+						alt=""
+						width="42"
+					/>
+					<div class="forecast-tempranges">
+						<span class="tempmax">
+							${Math.round(forecastDay.temp.max)}°
+						</span>
+						<span class="tempmin">
+							${Math.round(forecastDay.temp.min)}°
+						</span>
+					</div>
+				</div>
+			`;
+		}
+	});
+
+	forecastHTML = forecastHTML + `</div>`; //this div ends
+	forecastElement.innerHTML = forecastHTML;
+}
+
+function getforecast(coordinates) {
+	let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+	let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+	console.log(apiURL);
+	axios.get(apiURL).then(displayForecast);
+}
+
 function weather(response) {
 	document.querySelector("h2").innerHTML = response.data.name;
 	//returns the location name
@@ -42,6 +91,8 @@ function weather(response) {
 	let velocityofwind = response.data.wind.speed;
 	document.querySelector(".windSpeed").innerHTML = ` ${velocityofwind}`;
 	//the above provides the wind speed
+
+	getforecast(response.data.coord);
 }
 
 function searchlocation(position) {
