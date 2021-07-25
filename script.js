@@ -121,6 +121,7 @@ function darkblue(event) {
 	lightblue(city);
 }
 //the above two functions changes the LOCATION H2 to whatever I typed
+//functions are named as shades of BLUE b/c the search button is BLUE
 
 function conversionCtoF(event) {
 	//since it is C to F this means I am pressing Degrees F
