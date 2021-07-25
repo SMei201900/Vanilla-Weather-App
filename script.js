@@ -85,11 +85,11 @@ function weather(response) {
 	//the above provides the actual temperature number WITHOUT taking away the C and F
 
 	let howhumid = response.data.main.humidity;
-	document.querySelector(".theHumidity").innerHTML = `${howhumid}`;
+	document.querySelector(".theHumidity").innerHTML = `${howhumid} %`;
 	//the above provides the humidity value
 
 	let velocityofwind = response.data.wind.speed;
-	document.querySelector(".windSpeed").innerHTML = ` ${velocityofwind}`;
+	document.querySelector(".windSpeed").innerHTML = ` ${velocityofwind} km/h`;
 	//the above provides the wind speed
 
 	getforecast(response.data.coord);
