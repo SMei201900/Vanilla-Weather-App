@@ -44,7 +44,7 @@ function displayForecast(response) {
 							${Math.round(forecastDay.temp.max)}°
 						</span>
 						<span class="tempmin">
-							${Math.round(forecastDay.temp.min)}°
+							${Math.round(forecastDay.temp.min)}°C
 						</span>
 					</div>
 				</div>
@@ -85,7 +85,7 @@ function weather(response) {
 	//the above provides the actual temperature number WITHOUT taking away the C and F
 
 	let howhumid = response.data.main.humidity;
-	document.querySelector(".theHumidity").innerHTML = `${howhumid} %`;
+	document.querySelector(".theHumidity").innerHTML = `${howhumid}%`;
 	//the above provides the humidity value
 
 	let velocityofwind = response.data.wind.speed;
