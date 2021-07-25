@@ -29,10 +29,6 @@ h2 {
 	font-size: 18px;
 }
 
-.emoji {
-	color: yellow;
-	font-size: 45px;
-}
 .blue {
 	font-weight: bold;
 	margin-left: 10px;
@@ -55,6 +51,14 @@ h2 {
 	color: white;
 	opacity: 0.8;
 	cursor: pointer;
+}
+
+.forecastdayoftheweek {
+	padding-top: 10px;
+}
+
+.tempmin {
+	opacity: 0.8;
 }
 
 .credit {
